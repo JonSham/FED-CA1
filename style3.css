@@ -1,0 +1,228 @@
+/*Purpose and Goals css */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.navbar { /* the nav bar*/
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 120px;
+    cursor: pointer;
+}
+
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.navbar ul li::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #009688;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: width 0.5s; 
+}
+
+.navbar ul li:hover::after {
+    width: 100%;
+}
+.banner2 {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url(pexels-eberhard-grossgasteiger-1367188.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.content{
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    transform: translateY(-50%); 
+    overflow: hidden;
+}
+h1{
+    color: #fff;
+    margin: 20px 0px 20px;
+    font-size: 65px;
+    overflow-x: hidden;
+    opacity: 0;
+  }
+  h3{
+    color: #fff;
+    font-size: 35px;
+    margin-bottom: 50px;
+    opacity: 0;
+  }
+.slide-left{
+    animation: slideleft 1s linear forwards;
+}
+@keyframes slideleft{ /* for cool transition*/
+    0%{
+        transform: translate(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translate(0px);
+        opacity: 1;
+    }
+}
+h1.slide-left{
+    animation-delay: 0.5s;
+}
+h3.slide-left{
+    animation-delay: 1s;
+}
+.purpose{
+    width: 100%;
+    padding: 100px 0px;
+    background-color: #302c34;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.purpose1{
+    width: 100%;
+    padding: 100px 0px;
+    background-color: #302c34;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.purpose2{
+    width: 100%;
+    padding: 100px 0px;
+    background-color: #302c34;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+    flex-wrap: wrap;
+}
+.container .box{
+    position: relative;
+    width: 320px;
+    height: 400px;
+    color: #fff;
+    background: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 30px;
+    transition: 0.5s;
+}
+.container .box:hover{
+    transform: translateY(-20px)
+}
+.container .box::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg,#ffbc00,#ff0058);
+}
+.container .box::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg,#ffbc00,#ff0058);
+    filter: blur(30px);
+}
+.container .box:nth-child(2)::before,
+.container .box:nth-child(2)::after{
+    background: linear-gradient(315deg,#03a9f4,#ff0058);
+}
+.container .box:nth-child(3)::before,
+.container .box:nth-child(3)::after{
+    background: linear-gradient(315deg,#4dff03,#00d0ff);
+}
+.container .box span{
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    right: 6px;
+    bottom: 6px;
+    background: rgba(0,0,0,0.6);
+    z-index: 2;
+}
+.container .box span::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: rgba(225,255,255,0.1);
+    pointer-events: none;
+}
+.container .box .content1{
+    position: relative;
+    z-index: 10;
+    padding: 20px 40px;
+}
+.container .box .content1 h5{
+    font-size: 2em;
+    color: #fff;
+    margin-bottom: 51px;
+    line-height: 1.4em;
+}
+.container .box .content1 a{
+    display: inline-block;
+    font-size: 1.1em;
+    color: #fff;
+    padding: 10px;
+    text-decoration: none;
+    font-weight: 700;
+}
+.img {
+    max-width: 550px;
+    float: left;
+    border: 3px solid #fff;
+    border-radius: 10px;
+    margin-right: 15px;
+}
+.wrapper{
+    margin: 150px auto;
+    width: 70%;
+}
+.text-box{
+    color: #fff;
+}
+.text-box h4{
+    font-size: 42px;
+}
+.text-box p{
+    font-size: 20px;
+}
